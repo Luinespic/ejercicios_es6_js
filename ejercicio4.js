@@ -52,11 +52,9 @@ const streamersFiltered = streamers.filter((streamer) =>
 
 const streamersUpdated = streamersFiltered.map((streamer) => {
   if (streamer.age > 35) {
-    return {
-      ...streamer,
-      gameMorePlayed: streamer.gameMorePlayed.toUpperCase(),
-    };
-  } else return streamer;
+    streamer.gameMorePlayed = streamer.gameMorePlayed.toUpperCase();
+  }
+  return streamer;
 });
 
 console.log(streamersUpdated);
